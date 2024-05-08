@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="kmdiscount" version="3.1" method="upgrade">
+    <name>KSM_DISCOUNT_CUSTOM</name>
+    <version>4.1.11</version>
+    <creationDate>May 2017</creationDate>
+    <author>Шелудченков Александр</author>
+    <authorEmail>hudoznik-1@ya.ru</authorEmail>
+    <authorUrl>https://career.habr.com/hudoznik</authorUrl>
+    <copyright>Copyright (C) 2024 Шелудченков Александр Co All rights reserved.</copyright>
+    <license>https://creativecommons.org/licenses/by-sa/3.0/deed.ru CC BY-SA 3.0</license>
+    <description>KSM_DISCOUNT_CUSTOM_DESCRIPTION</description>
+	
+    <files>
+		<filename plugin="custom">custom.php</filename>
+		<filename>index.html</filename>
+        <folder>sql</folder>
+    </files>
+    
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.plg_kmdiscount_custom.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_kmdiscount_custom.sys.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <updateservers>
+        <server type="extension" priority="1" name="custom">http://update.ksenmart.ru/update-info/j3/pkg_ksenmart_4/com_ksenmart/plugins/plg_custom-update.xml</server>
+    </updateservers>
+
+</extension>
